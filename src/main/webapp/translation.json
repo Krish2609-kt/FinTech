@@ -1,0 +1,399 @@
+{
+  "app": {
+    "title": "Fin Tech"
+  },
+  "navigation": {
+    "toggle": "Toggle navigation",
+    "home": "Home",
+    "entities": "Entities"
+  },
+  "home": {
+    "index": {
+      "headline": "Welcome to your new app!",
+      "text": "Your app was created with <a href=\"https://bootify.io\" target=\"_blank\" className=\"underline\">Bootify.io</a> and can now be customized. If you are happy with the result, <strong>please recommend us to other developers</strong> - so Bootify.io can grow further.",
+      "swagger": {
+        "text": "Swagger is",
+        "link": "available here"
+      },
+      "exploreEntities": "Explore your entities"
+    }
+  },
+  "error": {
+    "page": {
+      "headline": "Error",
+      "message": "The page you are looking for is not available right now."
+    }
+  },
+  "user": {
+    "list": {
+      "headline": "Users",
+      "createNew": "Create new User",
+      "empty": "No Users could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add User",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "username": {
+      "label": "Username"
+    },
+    "passwordHash": {
+      "label": "Password Hash"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "phone": {
+      "label": "Phone"
+    },
+    "fullName": {
+      "label": "Full Name"
+    },
+    "kycStatus": {
+      "label": "Kyc Status"
+    },
+    "createdAt": {
+      "label": "Created At"
+    },
+    "updatedAt": {
+      "label": "Updated At"
+    },
+    "userRoleRoles": {
+      "label": "User Role Roles"
+    },
+    "edit": {
+      "headline": "Edit User",
+      "back": "Back to list"
+    },
+    "account": {
+      "user": {
+        "referenced": "This entity is still referenced by Account {{id}} via field User."
+      }
+    },
+    "kycDocument": {
+      "user": {
+        "referenced": "This entity is still referenced by Kyc Document {{id}} via field User."
+      }
+    },
+    "create": {
+      "success": "User was created successfully."
+    },
+    "update": {
+      "success": "User was updated successfully."
+    },
+    "delete": {
+      "success": "User was removed successfully."
+    }
+  },
+  "role": {
+    "list": {
+      "headline": "Roles",
+      "createNew": "Create new Role",
+      "empty": "No Roles could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add Role",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "name": {
+      "label": "Name"
+    },
+    "edit": {
+      "headline": "Edit Role",
+      "back": "Back to list"
+    },
+    "user": {
+      "userRoleRoles": {
+        "referenced": "This entity is still referenced by User {{id}} via field User Role Roles."
+      }
+    },
+    "create": {
+      "success": "Role was created successfully."
+    },
+    "update": {
+      "success": "Role was updated successfully."
+    },
+    "delete": {
+      "success": "Role was removed successfully."
+    }
+  },
+  "account": {
+    "list": {
+      "headline": "Accounts",
+      "createNew": "Create new Account",
+      "empty": "No Accounts could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add Account",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "accountNumber": {
+      "label": "Account Number"
+    },
+    "accountType": {
+      "label": "Account Type"
+    },
+    "balance": {
+      "label": "Balance"
+    },
+    "currency": {
+      "label": "Currency"
+    },
+    "createdAt": {
+      "label": "Created At"
+    },
+    "user": {
+      "label": "User"
+    },
+    "edit": {
+      "headline": "Edit Account",
+      "back": "Back to list"
+    },
+    "transaction": {
+      "fromAccount": {
+        "referenced": "This entity is still referenced by Transaction {{id}} via field From Account."
+      },
+      "toAccount": {
+        "referenced": "This entity is still referenced by Transaction {{id}} via field To Account."
+      }
+    },
+    "create": {
+      "success": "Account was created successfully."
+    },
+    "update": {
+      "success": "Account was updated successfully."
+    },
+    "delete": {
+      "success": "Account was removed successfully."
+    }
+  },
+  "transaction": {
+    "list": {
+      "headline": "Transactions",
+      "createNew": "Create new Transaction",
+      "empty": "No Transactions could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add Transaction",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "amount": {
+      "label": "Amount"
+    },
+    "currency": {
+      "label": "Currency"
+    },
+    "status": {
+      "label": "Status"
+    },
+    "transactionType": {
+      "label": "Transaction Type"
+    },
+    "initiatedAt": {
+      "label": "Initiated At"
+    },
+    "completedAt": {
+      "label": "Completed At"
+    },
+    "fromAccount": {
+      "label": "From Account"
+    },
+    "toAccount": {
+      "label": "To Account"
+    },
+    "edit": {
+      "headline": "Edit Transaction",
+      "back": "Back to list"
+    },
+    "fraudAlert": {
+      "transaction": {
+        "referenced": "This entity is still referenced by Fraud Alert {{id}} via field Transaction."
+      }
+    },
+    "create": {
+      "success": "Transaction was created successfully."
+    },
+    "update": {
+      "success": "Transaction was updated successfully."
+    },
+    "delete": {
+      "success": "Transaction was removed successfully."
+    }
+  },
+  "fraudAlert": {
+    "list": {
+      "headline": "Fraud Alerts",
+      "createNew": "Create new Fraud Alert",
+      "empty": "No Fraud Alerts could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add Fraud Alert",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "alertType": {
+      "label": "Alert Type"
+    },
+    "details": {
+      "label": "Details"
+    },
+    "status": {
+      "label": "Status"
+    },
+    "createdAt": {
+      "label": "Created At"
+    },
+    "transaction": {
+      "label": "Transaction"
+    },
+    "edit": {
+      "headline": "Edit Fraud Alert",
+      "back": "Back to list"
+    },
+    "create": {
+      "success": "Fraud Alert was created successfully."
+    },
+    "update": {
+      "success": "Fraud Alert was updated successfully."
+    },
+    "delete": {
+      "success": "Fraud Alert was removed successfully."
+    }
+  },
+  "kycDocument": {
+    "list": {
+      "headline": "Kyc Documents",
+      "createNew": "Create new Kyc Document",
+      "empty": "No Kyc Documents could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add Kyc Document",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "docType": {
+      "label": "Doc Type"
+    },
+    "docNumber": {
+      "label": "Doc Number"
+    },
+    "docFilePath": {
+      "label": "Doc File Path"
+    },
+    "verified": {
+      "label": "Verified"
+    },
+    "uploadedAt": {
+      "label": "Uploaded At"
+    },
+    "user": {
+      "label": "User"
+    },
+    "edit": {
+      "headline": "Edit Kyc Document",
+      "back": "Back to list"
+    },
+    "create": {
+      "success": "Kyc Document was created successfully."
+    },
+    "update": {
+      "success": "Kyc Document was updated successfully."
+    },
+    "delete": {
+      "success": "Kyc Document was removed successfully."
+    }
+  },
+  "settlement": {
+    "list": {
+      "headline": "Settlements",
+      "createNew": "Create new Settlement",
+      "empty": "No Settlements could be found.",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "add": {
+      "headline": "Add Settlement",
+      "back": "Back to list"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "date": {
+      "label": "Date"
+    },
+    "totalTransactions": {
+      "label": "Total Transactions"
+    },
+    "totalAmount": {
+      "label": "Total Amount"
+    },
+    "status": {
+      "label": "Status"
+    },
+    "generatedAt": {
+      "label": "Generated At"
+    },
+    "edit": {
+      "headline": "Edit Settlement",
+      "back": "Back to list"
+    },
+    "create": {
+      "success": "Settlement was created successfully."
+    },
+    "update": {
+      "success": "Settlement was updated successfully."
+    },
+    "delete": {
+      "success": "Settlement was removed successfully."
+    }
+  },
+  "select": {
+    "empty": {
+      "label": "Please select"
+    }
+  },
+  "delete": {
+    "confirm": "Do you really want to delete this element? This cannot be undone."
+  },
+  "operation": {
+    "success": "Your operation was successful."
+  },
+  "required": "Please provide a value.",
+  "maxlength": "Your value must have a length of less then ${max} characters.",
+  "valid": {
+    "offsetDateTime": "Please provide a valid date with offset, for example \"2026-01-23T14:55:00+01:00\".",
+    "number": "Please provide a valid number.",
+    "numeric": {
+      "format": "Please provide a valid numeric number.",
+      "digits": "Your provided value is out of the valid range: <{{precision}} digits>.<{{scale}} digits> expected."
+    }
+  }
+}

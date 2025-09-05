@@ -1,0 +1,73 @@
+package io.bootify.fin_tech.rest;
+
+import io.bootify.fin_tech.model.KycDocumentDTO;
+import io.bootify.fin_tech.service.KycDocumentService;
+import io.bootify.fin_tech.service.UserService;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import jakarta.validation.Valid;
+import java.util.List;
+import java.util.Map;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+@RequestMapping(value = "/api/kycDocuments", produces = MediaType.APPLICATION_JSON_VALUE)
+public class KycDocumentResource {
+
+    private final KycDocumentService kycDocumentService;
+    private final UserService userService;
+
+    public KycDocumentResource(final KycDocumentService kycDocumentService,
+            final UserService userService) {
+        this.kycDocumentService = kycDocumentService;
+        this.userService = userService;
+    }
+
+    @GetMapping
+    public ResponseEntity<List<KycDocumentDTO>> getAllKycDocuments() {
+        return ResponseEntity.ok(kycDocumentService.findAll());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<KycDocumentDTO> getKycDocument(@PathVariable(name = "id") final Long id) {
+        return ResponseEntity.ok(kycDocumentService.get(id));
+    }
+
+    @PostMapping
+    @ApiResponse(responseCode = "201")
+    public ResponseEntity<Long> createKycDocument(
+            @RequestBody @Valid final KycDocumentDTO kycDocumentDTO) {
+        final Long createdId = kycDocumentService.create(kycDocumentDTO);
+        return new ResponseEntity<>(createdId, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Long> updateKycDocument(@PathVariable(name = "id") final Long id,
+            @RequestBody @Valid final KycDocumentDTO kycDocumentDTO) {
+        kycDocumentService.update(id, kycDocumentDTO);
+        return ResponseEntity.ok(id);
+    }
+
+    @DeleteMapping("/{id}")
+    @ApiResponse(responseCode = "204")
+    public ResponseEntity<Void> deleteKycDocument(@PathVariable(name = "id") final Long id) {
+        kycDocumentService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/userValues")
+    public ResponseEntity<Map<Long, String>> getUserValues() {
+        return ResponseEntity.ok(userService.getUserValues());
+    }
+
+}
